@@ -1,13 +1,13 @@
 <?php
 //Requiero modelo conexión
-require("../../../modelo/mod_connex.php");
+require("../../modelo/mod_connex.php");
 	//Creo un objeto conexión
 	$conexion = new Connex();
 	//Instacio la función conectar
 	$pgconn= $conexion->conectar();
 
 //Requiero modelo atleta
-require("../../../modelo/mod_atleta.php");
+require("../../modelo/mod_atleta.php");
 	//Creo un objeto atleta
 	$consulta= new atleta();
 	//Instancio la función listar

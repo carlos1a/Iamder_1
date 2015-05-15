@@ -4,10 +4,14 @@ class atleta {
 	private $atl_nom;
 	private $atl_ape;
 	private $atl_tel;
+	private $atl_sex;
 	private $atl_nac;
 	private $atl_dir;
 	private $atl_est;
 	private $atl_pes;
+	private $atl_cam;
+	private $atl_pan;
+	private $atl_bec;
 	private $atl_fe;
 	private $dis_cod;
 	private $equ_cod;
@@ -15,17 +19,17 @@ class atleta {
 
 /* ---------------------------*/
 	//Agregar
-	public function agregar ($atl_ced, $atl_nom, $atl_ape, $atl_tel, $atl_nac, $atl_dir, $atl_est, $atl_pes, $atl_fe, $dis_cod, $equ_cod, $rep_cod, $pgconn){
-		$query = "INSERT INTO atleta (atl_ced, atl_nom, atl_ape, atl_tel, atl_nac, atl_dir, atl_est, atl_pes, atl_fe, dis_cod, equ_cod, rep_cod)
-		VALUES ('$atl_ced', '$atl_nom', '$atl_ape', '$atl_tel', '$atl_nac', '$atl_dir', '$atl_est', '$atl_pes', '$atl_fe', '$dis_cod', '$equ_cod', '$rep_cod')";
+	public function agregar ($atl_ced, $atl_nom, $atl_ape, $atl_tel, $atl_sex, $atl_nac, $atl_dir, $atl_est, $atl_pes, $atl_cam, $alt_pan, $atl_bec, $atl_fe, $dis_cod, $equ_cod, $rep_cod, $pgconn){
+		$query = "INSERT INTO atleta (atl_ced, atl_nom, atl_ape, atl_tel, atl_sex, atl_nac, atl_dir, atl_est, atl_pes, atl_cam, atl_pan, atl_bec, atl_fe, dis_cod, equ_cod, rep_cod)
+		VALUES ('$atl_ced', '$atl_nom', '$atl_ape', '$atl_tel', '$atl_sex', '$atl_nac', '$atl_dir', '$atl_est', '$atl_pes', '$atl_cam', '$atl_pan', '$atl_bec', '$atl_fe', '$dis_cod', '$equ_cod', '$rep_cod')";
 		$consulta = pg_query($pgconn, $query) or die("Error al agregar: ".pg_last_error());
 		return $consulta;
 	}//Cierro función agregar
 
 /* ---------------------------*/
 	//Modificar
-	public function modificar ($atl_cod, $atl_ced, $atl_nom, $atl_ape, $atl_tel, $atl_nac, $atl_dir, $atl_est, $atl_pes, $atl_fe, $pgconn){
-		$query = "UPDATE atleta SET atl_ced ='$atl_ced', atl_nom = '$atl_nom', atl_ape = '$atl_ape', atl_tel = '$atl_tel', alt_nac = '$atl_nac', atl_dir = '$atl_dir', atl_est = '$atl_est', atl_pes = '$atl_pes', atl_fe = '$atl_fe' WHERE atl_cod = '$atl_cod'";
+	public function modificar ($atl_cod, $atl_ced, $atl_nom, $atl_ape, $atl_tel, $atl_sex, $atl_nac, $atl_dir, $atl_est, $atl_pes, $atl_cam, $atl_pan, $atl_bec, $atl_fe, $pgconn){
+		$query = "UPDATE atleta SET atl_ced ='$atl_ced', atl_nom = '$atl_nom', atl_ape = '$atl_ape', atl_tel = '$atl_tel', atl_sex = '$atl_sex', alt_nac = '$atl_nac', atl_dir = '$atl_dir', atl_est = '$atl_est', atl_pes = '$atl_pes', atl_cam = '$atl_cam', atl_pan = '$atl_pan', atl_bec = '$atl_bec', atl_fe = '$atl_fe' WHERE atl_cod = '$atl_cod'";
 		$consulta = pg_query($pgconn, $query) or die("Consulta err&oacute;nea al modificar: ".pg_last_error());
 		if ($consulta) {
            $mensaje='Modificaci&oacute;n realizada';
@@ -59,7 +63,7 @@ class atleta {
 /* ---------------------------*/
 	//Listar
 	public function listar ($pgconn){
-		$query = "SELECT atleta.atl_ced, atleta.atl_nom , atleta.atl_ape, disciplina.dis_des FROM atleta, disciplina WHERE atleta.dis_cod = disciplina.dis_cod ORDER BY atl_ced ASC";
+		$query = "SELECT atleta.atl_ced, atleta.atl_nom , atleta.atl_ape, atleta.atl_bec, disciplina.dis_des FROM atleta, disciplina WHERE atleta.dis_cod = disciplina.dis_cod ORDER BY atl_ced ASC";
 		$consulta = pg_query($pgconn, $query) or die("Error al listar ".pg_last_error());
 		return $consulta;
 	}//Cierro función listar
@@ -68,7 +72,7 @@ class atleta {
 //Mostrar	
 	public function mostrar($pgconn)
 	{
-		$query = "SELECT atl_nom, atl_ape , atl_ced FROM atleta ORDER BY atl_cod DESC LIMIT 1";
+		$query = "SELECT atl_nom, atl_ape , atl_ced, atl_sex FROM atleta ORDER BY atl_cod DESC LIMIT 1";
 		$consulta= pg_query($pgconn, $query) or die ("Error al mostrar: ".pg_last_error($consulta));
 		if($consulta)
 		{

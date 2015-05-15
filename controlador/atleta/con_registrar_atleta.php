@@ -11,14 +11,19 @@ $atl_ced= trim ($_POST ['cedula']);
 $atl_nom= trim ($_POST ['nombre']);
 $atl_ape= trim ($_POST  ['apellido']);
 $atl_tel= trim ($_POST  ['telefono']);
+$atl_sex= trim ($_POST ['sexo']);
 $atl_nac= trim ($_POST ['fechanacimiento']);
 $atl_dir= trim ($_POST  ['direccion']);
 $atl_est= trim ($_POST  ['estatura']);
 $atl_pes= trim ($_POST  ['peso']);
+$atl_cam= trim ($_POST ['tallacamisa']);
+$atl_pan= trim ($_POST ['tallapantalon']);
+$atl_bec= trim ($_POST ['beca']);
 $atl_fe = trim ($_POST  ['fechacreacion']);
 $dis_cod= trim ($_POST ['disciplina']);
 $equ_cod= 1;
 $rep_cod= 1;
+
 
 //Requiero modelo atleta
 require("../../modelo/mod_atleta.php");
@@ -26,7 +31,7 @@ require("../../modelo/mod_atleta.php");
 	$atleta= new atleta();
 
 		//Instancio la función agregar
-		$inserto=$atleta->agregar($atl_ced,$atl_nom,$atl_ape,$atl_tel,$atl_nac,$atl_dir,$atl_est,$atl_pes,$atl_fe,$dis_cod,$equ_cod,$rep_cod,$pgconn);
+		$inserto=$atleta->agregar($atl_ced,$atl_nom,$atl_ape,$atl_tel,$atl_sex,$atl_nac,$atl_dir,$atl_est,$atl_pes,$atl_cam,$atl_pan,$atl_bec,$atl_fe,$dis_cod,$equ_cod,$rep_cod,$pgconn);
 			if ($inserto==true)
 			{//Abro if 1
 				$consulta= $atleta->mostrar($pgconn);
