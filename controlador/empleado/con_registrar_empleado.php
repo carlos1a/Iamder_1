@@ -24,7 +24,7 @@ die("Las claves no coinciden");
 }else{
 $inserto=$empleado->agregar($emp_ced,$emp_nom,$emp_ape,$emp_cor,$emp_tel,$emp_log,$emp_cla,$emp_fe,$tipemp_cod,$est_cod,$dis_cod,$pgconn);
 if ($inserto==true){
-$consulta= $empleado->obtener($emp_ced,$pgconn);
+$consulta= $empleado->mostrar($pgconn);
 if(pg_num_rows($consulta)>0){
 $row=pg_fetch_row($empleado);
 header("Location: ../../vista/empleado/vis_empleado_registrado.php");
