@@ -1,18 +1,5 @@
 <head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/styles.css">
-		</noscript>
 		<script type="text/javascript">
 $(document).ready(function(){
 $('.menujq > ul > li:has(ul)').addClass('desplegable');
@@ -36,7 +23,7 @@ comprobar.slideDown('normal');
 	<!-- Sidebar -->
 					<div id="sidebar" class="menujq">
 						<!-- Logo -->
-							<a id="logo" href="inicio2.php" ><img src="images/logo.png"width='140' height='204'/></a>
+							<a id="logo" href="inicio.php" ><img src="CSS/imagenes/logo.png"width='140' height='204'/></a>
 							<p>
 							</p>
                                 <?php

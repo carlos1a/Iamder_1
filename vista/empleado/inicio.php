@@ -1,3 +1,6 @@
+<?php
+require ("../../controlador/con_session.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,5 +9,8 @@
 </head>
 <body>
 	<h1> Bienvenido </h1>
+<?php
+require ("../menu.php");
+?>
 </body>
 </html>

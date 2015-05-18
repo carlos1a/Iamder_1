@@ -20,7 +20,7 @@
 		header("Location: ../../vista/empleado/inicio.php");
 	}
 	else{
-		$alerta = "Prueba del error";
+		$alerta = "Problemas al iniciar sesión";
 		header("Location: ../../vista/error.php?alerta=$alerta");
 	}
 	if($mensaje!="") { echo $mensaje;}
