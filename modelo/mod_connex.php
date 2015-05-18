@@ -12,7 +12,7 @@ class Connex{//Abro clase conexión
         $this->user = 'postgres';
         $this->clave='root';//'cucchacao';
         $this->servidor ='localhost';
-        $this->db = 'iamder';
+        $this->db = 'iamder2';
         $this->port = 5432;
         $this->pgconn='';
     }
