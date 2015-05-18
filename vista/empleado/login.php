@@ -3,55 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Formulario - Login</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
 
-<style>
-
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-}
-
-.login {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-
-}
-
-#sha{
-	max-width: 340px;
-    -webkit-box-shadow: 0px 0px 18px 0px rgba(48, 50, 50, 0.48);
-    -moz-box-shadow:    0px 0px 18px 0px rgba(48, 50, 50, 0.48);
-    box-shadow:         0px 0px 18px 0px rgba(48, 50, 50, 0.48);
-    border-radius: 6%;
-  }
- #avatar{
-width: 96px;
-height: 96px;
-margin: 0px auto 10px;
-display: block;
-border-radius: 50%;
- }
-
-</style>
-
+<?php
+require("../css/css.php");
+ ?>
 
 </head>
 <body>
 
+
 	<div class="container well" id="sha">
 		<div class="row">
 					<div class="col-xs-12">
-						<img src="" class="img-responsive" id="avatar">
+						<img src= "../css/imagenes/images.jpg" class="img-responsive" id="avatar">
 					</div>
 		</div>
 
-		<form class="login" action="check.php" method="POST">
+		<form class="login" action="controlador.php" method="POST">
 				<div class="form-group">
-					<input type="email" class="form-control" placeholder="Correo electrónico" name="email" required autofocus>
+					<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="email" required autofocus>
 				</div>
 
 
