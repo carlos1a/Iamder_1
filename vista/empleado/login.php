@@ -64,6 +64,7 @@ border-radius: 50%;
 				<input type="checkbox" value="1" name="remember"> No cerrar sesión
 				</label>
 				       <p class="help-block"><a href="#">¿No puedes acceder a tu cuenta?</a></p>
+				       <p class="help-block" >¿Eres Nuevo Usuario?<a href="vis_registrar_empleado.php"> Registrate</a></p>
 				</div>
 
 	    </form>
