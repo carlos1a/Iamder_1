@@ -5,19 +5,18 @@ class empleado{ //Abro clase empleado
 	private $emp_ape;
 	private $emp_cor;
 	private $emp_tel;
-	private $emp_log;
 	private $emp_cla;
 	private $emp_fe;
-	private $tipemp_cod;
+	private $tipo_empe;
 	private $est_cod;
 	private $dis_cod;
 	private $pgconn;
 
 //Función agregar
-	public function agregar($emp_ced, $emp_nom, $emp_ape, $emp_cor, $emp_tel, $emp_log, $emp_cla, $emp_fe, $tipemp_cod, $est_cod, $dis_cod, $pgconn)
+	public function agregar($emp_ced, $emp_nom, $emp_ape, $emp_cor, $emp_tel, $tipo_empe, $emp_cla, $emp_fe,  $est_cod, $dis_cod, $pgconn)
 	{
-		$query = "INSERT INTO empleado (emp_ced, emp_nom, emp_ape, emp_cor, emp_tel, emp_log, emp_cla, emp_fe, tipemp_cod, est_cod, dis_cod)
-		VALUES ('$emp_ced', '$emp_nom', '$emp_ape', '$emp_cor', '$emp_tel', '$emp_log', md5('$emp_cla'), '$emp_fe', '$tipemp_cod', '$est_cod', '$dis_cod')";
+		$query = "INSERT INTO empleado (emp_ced, emp_nom, emp_ape, emp_cor, emp_tel, tipo_empe, emp_cla, emp_fe, est_cod, dis_cod)
+		VALUES ('$emp_ced', '$emp_nom', '$emp_ape', '$emp_cor', '$emp_tel', '$tipo_empe', md5('$emp_cla'), '$emp_fe', '$est_cod', '$dis_cod')";
 		$consulta= pg_query($pgconn,$query) or die ("Error al agregar: ".pg_last_error($consulta));
 		return $consulta;
 	}//Cierro función agregar
@@ -27,7 +26,7 @@ class empleado{ //Abro clase empleado
 	{
 		$query= "SELECT * FROM empleado WHERE emp_log='$emp_log' AND emp_cla='$emp_cla'	";
 		$consulta= pg_query($pgconn, $query) or die ("CONSULTA ERRADA: ".pg_last_error($consulta));
-		
+
 		if($consulta)
 		{//Abro if autenticar
 		return $consulta;
@@ -66,11 +65,11 @@ class empleado{ //Abro clase empleado
 			return ($consulta);
 			}//Cierro if
 		}//Cierro función
-	
-//Función mostrar	
+
+//Función mostrar
 	public function mostrar($pgconn)
 	{
-		$query= "SELECT emp_nom, emp_ape , emp_ced, emp_log, emp_cla FROM empleado ORDER BY emp_cod DESC LIMIT 1";
+		$query= "SELECT emp_nom, emp_ape , emp_ced, emp_cla FROM empleado ORDER BY emp_cod DESC LIMIT 1";
 		$consulta= pg_query($pgconn, $query) or die ("Error al mostrar: ".pg_last_error($consulta));
 		if($consulta)
 		{

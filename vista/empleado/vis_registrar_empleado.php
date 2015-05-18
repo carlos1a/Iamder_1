@@ -1,8 +1,10 @@
 <?php
 //require ("../session.php");
+require("../css/css.php");
+
 ?>
 <!DOCTYPE HTML>
-<html lang=es>
+<html lang="es">
   <head>
 
     <title>Empleados</title>
@@ -23,86 +25,56 @@
 
                     </ul>
                   </div>
-                  <form id="form1" name="form1" method="post" action="../../controlador/empleado/con_registrar_empleado.php">
-                  <div class="form-group">
-    <h2>Rellene el formulario para registrar sus datos en el sistema</h2>
+
+          <h2 align="center">Rellene el formulario para registrar sus datos en el sistema</h2>
+        <form class="login" id="form" action="../../controlador/empleado/con_registrar_empleado.php" method="POST">
+
+        <div class="form-group">
+          Cédula:<input type="text" class="form-control" placeholder="Ingresa tu Cédula" name="cedula" required>
+        </div>
+
+        <div class="form-group">
+          Nombre:<input type="text" class="form-control" placeholder="Ingresa tu Nombre" name="nombre" required autofocus>
+        </div>
+
+        <div class="form-group">
+          Apellido:<input type="text" class="form-control" placeholder="Ingresa tu Apellido" name="apellido" required autofocus>
+        </div>
+      <div class="form-group">
+          Correo:<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="correo" required autofocus>
+        </div>
+
+      <div class="form-group">
+          Teléfono:<input type="text" class="form-control" placeholder="Ingresa tu Teléfono" name="telefono" required autofocus>
+        </div>
+
+      <div class="form-group" >
+            Seleccione Cargo:<select class="form-control" name="tipo_empe" id="tipo_empe" >
+        <option  selected="selected" value="0">Selecione</option>
+        <option value="1">Administrador</option>
+        <option value="2">Empleado</option>
+        <option value="3">Entrenador</option>
+      </select>
+      </div>
+
+        <div class="form-group">
+          Clave:<input type="password" class="form-control" placeholder="Ingresa tu Clave" name="clave" required autofocus>
+        </div>
+
+        <div class="form-group">
+          Confirma tu Clave:<input type="password" class="form-control" placeholder="Confirma tu Clave" name="conficlave" required autofocus>
+        </div>
+        <div class="form-group">
+          Fecha de Registro:<input type="Date" class="form-control"  name="fechacreacion" required autofocus>
+        </div>
 
 
-    <label for="number">Cédula</label>
-    <td width="298" scope="col"><div align="right"><strong>C&eacute;dula:&nbsp;</strong></div></td>
-    <td width="466" scope="col"><input type="text" name="cedula" id="cedula" placeholder="Cédula"/></td>
-    <th width="385" scope="col">&nbsp;</th>
-  </tr>
-  <tr>
-    <th width="41" scope="col">&nbsp;</th>
-    <td width="298" scope="col"><div align="right"><strong>Nombre:&nbsp;</strong></div></td>
-    <td width="466" scope="col"><input type="text" name="nombre" id="nombre" placeholder="Nombre"/></td>
-    <th width="385" scope="col">&nbsp;</th>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Apellido:&nbsp;</strong></div></td>
-    <td><input type="text" name="apellido" id="apellido" placeholder="Apellido"/></td>
-    <td>&nbsp;</td>
-  </tr>
-    <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Correo:&nbsp;</strong></div></td>
-    <td><input type="text" name="correo" id="correo" placeholder="ejemplo@dominio.com"/></td>
-    <td>&nbsp;</td>
-  </tr>
-    <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Tel&eacute;fono:&nbsp;</strong></div></td>
-    <td><input type="text" name="telefono" id="telefono" placeholder="2127813002"/></td>
-    <td>&nbsp;</td>
-  </tr>
-    <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Login:&nbsp;</strong></div></td>
-    <td><input type="text" name="login" id="login" placeholder="Usuario De Red"/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Clave:&nbsp;</strong></div></td>
-    <td><input type="password" name="clave" id="clave" placeholder="*******"/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Confirme su clave:&nbsp;</strong></div></td>
-    <td><input type="password" name="conficlave" id="conficlave" placeholder="*******"/></td>
-    <td>&nbsp;</td>
-  </tr>
-    <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Fecha de registro:&nbsp;</strong></div></td>
-    <td><input type="date" name="fechacreacion" id="fechacreacion"/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Perfil:&nbsp;</strong></div></td>
-    <td><select name="tipoempleado" id="tipoempleado" required>
-      <option value="">Seleccione</option>
-      <option value="1">Administrador</option>
-      <option value="2">Empleado</option>
-      <option value="3">Entrenador</option>
 
-     </select></td>
-  </tr>
-  <tr>
- <tr>
-  <td colspan="4" align="center">&nbsp;</td>
- </tr>
-    <td colspan="4" align="center"><input type="submit" name="enviar" id="enviar" value="Enviar" />
-      <!--<input type="reset" name="borrar" id="borrar" value="Borrar" /></td>--> </td>
-    </tr>
-</table>
-    <p>&nbsp;</p>
-    </div>
-</form></p>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button> <button class="btn btn-lg btn-primary btn-block" type="reset">Borrar</button>
+
+      </form>
+</p>
         <!-- Menu -->
         <!--<?php
 //require ("menu.php");

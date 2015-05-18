@@ -24,7 +24,6 @@ $dis_cod= trim ($_POST ['disciplina']);
 $equ_cod= 1;
 $rep_cod= 1;
 
-
 //Requiero modelo atleta
 require("../../modelo/mod_atleta.php");
 	//Creo un nuevo objeto atleta
