@@ -65,11 +65,8 @@ require("../css/css.php");
           Confirma tu Clave:<input type="password" class="form-control" placeholder="Confirma tu Clave" name="conficlave" required autofocus>
         </div>
         <div class="form-group">
-          Fecha de Registro:<input type="Date" class="form-control"  name="fechacreacion" required autofocus>
+          Fecha de Registro:<input type="text" class="form-control"  name="fechacreacion" value="<?php echo date('Y-m-d'); ?>" readonly="true" required autofocus>
         </div>
-
-
-
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button> <button class="btn btn-lg btn-primary btn-block" type="reset">Borrar</button>
 
