@@ -1,8 +1,8 @@
 <?php
-	$emp_ced=$_POST['cedula'];
-	$emp_cla=$_POST['clave'];
-   	$_SESSION['cedula']= 	$emp_ced;
-   	$_SESSION['clave'] =	$emp_cla;
+	$emp_ced = $_POST['cedula'];
+	$emp_cla = md5 ($_POST['clave']);
+   	$_SESSION['cedula'] = $emp_ced;
+   	$_SESSION['clave']  = $emp_cla;
 
 	require ('../../modelo/mod_connex.php');
 		$conexion = new Connex();

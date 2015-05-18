@@ -52,19 +52,19 @@ border-radius: 50%;
 		<form class="login" action="../../controlador/empleado/con_login.php" method="POST">
 
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Ingrese su Cédula" name="cedula" required autofocus>
+					<input type="text" class="form-control" placeholder="Ingrese su número de cédula" name="cedula" required autofocus>
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" placeholder="Contraseña" name="clave" required>
 				</div>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">iniciar sesión</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
 
 				<div class="checkbox">
 				<label class="checkbox">
 				<input type="checkbox" value="1" name="remember"> No cerrar sesión
 				</label>
 				       <p class="help-block"><a href="#">¿No puedes acceder a tu cuenta?</a></p>
-				       <p class="help-block" >¿Eres Nuevo Usuario?<a href="vis_registrar_empleado.php"> Registrate</a></p>
+				       <p class="help-block" >¿Eres nuevo usuario?<a href="vis_registrar_empleado.php"> ¡Registrate!</a></p>
 				</div>
 
 	    </form>
