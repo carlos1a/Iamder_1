@@ -23,7 +23,6 @@ $mostrar=$consulta-> mostrar ($pgconn);
  <th align="center" bgcolor="#eeece1"><span class="style3">Nombre</span></th>
  <th align="center" bgcolor="#eeece1"><span class="style3">Apellido</span></th>
  <th align="center" bgcolor="#eeece1"><span class="style3">Cédula</span></th>
- <th align="center" bgcolor="#eeece1"><span class="style3">Usuario</span></th>
 </tr>
 </thead>
 <?php
@@ -32,13 +31,11 @@ $row= pg_fetch_array($mostrar,$i,PGSQL_ASSOC);
 $emp_nom = $row["emp_nom"];
 $emp_ape = $row["emp_ape"];
 $emp_ced = $row["emp_ced"];
-$emp_log = $row["emp_log"];
 ?>
 <tr>
 <td align="center" bgcolor="#f7f6f1"><span class="style1"><?php echo $emp_nom;?></span>
 <td align="center" bgcolor="#f7f6f1"><span class="style1"><?php echo $emp_ape;?></span>
 <td align="center" bgcolor="#f7f6f1"><span class="style1"><?php echo $emp_ced;?></span>
-<td align="center" bgcolor="#f7f6f1"><span class="style1"><?php echo $emp_log;?>
     <?php }?>
 </span>
 </table>
