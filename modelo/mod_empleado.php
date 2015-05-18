@@ -22,9 +22,9 @@ class empleado{ //Abro clase empleado
 	}//Cierro función agregar
 
 //Función autenticar
-		public function autenticar($emp_log, $emp_cla, $pgconn)
+		public function autenticar($emp_ced, $emp_cla, $pgconn)
 	{
-		$query= "SELECT * FROM empleado WHERE emp_log='$emp_log' AND emp_cla='$emp_cla'	";
+		$query= "SELECT * FROM empleado WHERE emp_ced='$emp_ced' AND emp_cla='$emp_cla'	";
 		$consulta= pg_query($pgconn, $query) or die ("CONSULTA ERRADA: ".pg_last_error($consulta));
 
 		if($consulta)

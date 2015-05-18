@@ -49,35 +49,26 @@ border-radius: 50%;
 					</div>
 		</div>
 
-		<form class="login" action="check.php" method="POST">
-				<div class="form-group">
-					<input type="email" class="form-control" placeholder="Correo electrónico" name="email" required autofocus>
-				</div>
-
+		<form class="login" action="../../controlador/empleado/con_login.php" method="POST">
 
 				<div class="form-group">
-					<input type="password" class="form-control" placeholder="Contraseña" name="pass" required>
+					<input type="text" class="form-control" placeholder="Ingrese su Cédula" name="cedula" required autofocus>
 				</div>
-
-
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Contraseña" name="clave" required>
+				</div>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">iniciar sesión</button>
 
 				<div class="checkbox">
-
-					<label class="checkbox">
-				        <input type="checkbox" value="1" name="remember"> No cerrar sesión
-				    </label>
+				<label class="checkbox">
+				<input type="checkbox" value="1" name="remember"> No cerrar sesión
+				</label>
 				       <p class="help-block"><a href="#">¿No puedes acceder a tu cuenta?</a></p>
 				</div>
 
 	    </form>
-
-
-
 	</div>
-
-
+</body>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="../bootstrap/js/bootstrap.js"></script>
-</body>
 </html>
