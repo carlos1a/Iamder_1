@@ -45,7 +45,7 @@ border-radius: 50%;
 	<div class="container well" id="sha">
 		<div class="row">
 					<div class="col-xs-12">
-						<img src="" class="img-responsive" id="avatar">
+						<img src="../CSS/imagenes/images.jpg" class="img-responsive" id="avatar">
 					</div>
 		</div>
 
