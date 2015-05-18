@@ -1,6 +1,6 @@
 <?php
-	$emp_ced=			$_POST['cedula'];
-	$emp_cla=			$_POST['clave'];
+	$emp_ced=$_POST['cedula'];
+	$emp_cla=$_POST['clave'];
    	$_SESSION['cedula']= 	$emp_ced;
    	$_SESSION['clave'] =	$emp_cla;
 
@@ -20,7 +20,8 @@
 		header("Location: ../../vista/empleado/inicio.php");
 	}
 	else{
-		header("Location: ../../vista/error.php");
+		$alerta = "Prueba del error";
+		header("Location: ../../vista/error.php?alerta=$alerta");
 	}
 	if($mensaje!="") { echo $mensaje;}
 ?>
