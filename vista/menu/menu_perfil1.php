@@ -49,5 +49,5 @@
 								</li>
 								<li><a href="vis_actualizarclave.php">Cambiar clave</a></li>
 								<li><a href="#" target="_blank">Manual</a></li>
-								<li><a href="salir.php">Salir</a></li>
+								<li><a href="../salir.php">Salir</a></li>
 									</ul>

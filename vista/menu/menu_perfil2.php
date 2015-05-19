@@ -44,6 +44,6 @@
 								</li>
 								<li><a href="Manual.pdf" target="_blank">Manual</a></li>
 								<li><a href="actualizar_clave.php">Cambiar Contraseña</a></li>
-								<li><a href="salir.php">Salir</a></li>
+								<li><a href="../salir.php">Salir</a></li>
 								<!--<li><a href="actualizar_clave.php">Cambiar Contraseña</a></li>-->
 									</ul>

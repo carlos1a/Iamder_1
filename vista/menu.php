@@ -23,7 +23,7 @@ comprobar.slideDown('normal');
 	<!-- Sidebar -->
 					<div id="sidebar" class="menujq">
 						<!-- Logo -->
-							<a id="logo" href="inicio.php" ><img src="CSS/imagenes/logo.png"width='140' height='204'/></a>
+							<a id="logo" href="inicio.php" ><img src="css/imagenes/logo.png"width='140' height='204'/></a>
 							<p>
 							</p>
                                 <?php

@@ -23,7 +23,7 @@ if(isset($_SESSION['time']))
 			{
 //Al cerrar sesión la destruyo
 			session_destroy();
-				header('Location: inicio.php');}
+				header('Location: login.php');}
 
 }
 //Tiempo que destruyo la sesión
