@@ -10,7 +10,7 @@ $_SESSION['emp_cla'];
 //Verifico si no existe sesión
 //para redireccionar al inicio
 if(!isset($_SESSION['emp_ced'])){
-	header('Location: inicio.php');
+	header("Location: inicio.php");
 	 }
 //Si no, actualizo el tiempo cada vez que
 //haga interacción en el sistema
@@ -23,7 +23,7 @@ if(isset($_SESSION['time']))
 			{
 //Al cerrar sesión la destruyo
 			session_destroy();
-				header('Location: inicio.php');}
+				header("Location: inicio.php");}
 
 }
 //Tiempo que destruyo la sesión
