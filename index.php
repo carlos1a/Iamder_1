@@ -12,20 +12,20 @@
 
 <body>
 
-	 <form action="controlador/empleado/con_login.php" method="post">
+	 <form action="controlador/empleado/con_login.php" method="post" autocomplete="off">
 	  <div class="body"></div>
 			<div class="grad"></div>
 			<div class="header">
 				<div><span>Iamder</span></div>
 			</div>
 			<br>
-			<div class="login">
-					<input type="text" placeholder="Ingrese tu Cédula" name="cedula"><br>
-					<input type="password" placeholder="Ingresa tu Clave" name="clave"><br>
+			<div class="login" >
+					<input type="text" placeholder="Ingrese tu Cédula" name="cedula" required><br>
+					<input type="password" placeholder="Ingresa tu Clave" name="clave" required><br>
 
 					<br><button class="btn btn-lg btn-primary btn-block" type="submit">Inicia sesión</button><br>
 					 <p align="center"><a href="#">¿No puedes acceder a tu cuenta?</a></p>
-					 <p align="center">¿Eres nuevo usuario?<a href="vis_registrar_empleado.php"> ¡Registrate!</a></p>
+					 <p align="center">¿Eres nuevo usuario?<a href="vista/empleado/vis_registrar_empleado.php"> ¡Registrate!</a></p>
 			</div>
 	</form>
 </body>

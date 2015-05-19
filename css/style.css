@@ -55,6 +55,7 @@ body{
 
 .header div span{
 	color: #fff !important;
+	font-weight: bold;
 }
 
 .login{
