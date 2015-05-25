@@ -50,7 +50,7 @@ require("../css/css.php");
 
       <div class="form-group" >
             Seleccione Cargo:<select class="form-control" name="tipo_empe" id="tipo_empe" >
-        <option  selected="selected" value="0">Selecione</option>
+        <option  selected="selected" value="" >Selecione</option>
         <option value="1">Administrador</option>
         <option value="2">Empleado</option>
         <option value="3">Entrenador</option>

@@ -1,6 +1,6 @@
 <?php
 	$emp_ced = $_POST['cedula'];
-	$emp_cla = md5 ($_POST['clave']);
+	$emp_cla = md5($_POST['clave']);
    	$_SESSION['emp_ced'] = $emp_ced;
    	$_SESSION['emp_cla']  = $emp_cla;
 
