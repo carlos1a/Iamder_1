@@ -1,5 +1,5 @@
 <?php
-require ("../../controlador/empleado/con_mostrar_empleado_registrado.php");
+require ("../../controlador/con_session.php");
 ?>
 <!DOCTYPE HTML>
 
@@ -32,6 +32,9 @@ require ("../../controlador/empleado/con_mostrar_empleado_registrado.php");
 
 										<!-- TITULO EN LA PESTAÑA-->
 										<span class="date"><span class="month">Registrado</span>
+<?php
+require ("../../controlador/empleado/con_mostrar_empleado_registrado.php");
+?>
 
 								</article>
 

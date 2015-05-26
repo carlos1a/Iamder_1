@@ -1,7 +1,7 @@
 <?php
-//require ("../session.php");
+require ("../../controlador/con_session.php");
 require("../css/css.php");
-
+$cedula = $_GET['emp_ced'];
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
@@ -30,26 +30,34 @@ require("../css/css.php");
         <form class="login" id="form" action="../../controlador/empleado/con_registrar_empleado.php" method="POST">
 
         <div class="form-group">
-          Cédula:<input type="text" class="form-control" placeholder="Ingresa tu Cédula" name="cedula" required>
+          Cédula:<input type="text" class="form-control" name="cedula" id="cedula" placeholder="Cédula" readonly="true" value="<?php echo $cedula; ?>" title="Ingrese cédula del empleado" pattern="^[0-9]{6,8}$" required>
         </div>
 
         <div class="form-group">
-          Nombre:<input type="text" class="form-control" placeholder="Ingresa tu Nombre" name="nombre" required autofocus>
+          Nombre:<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" title="Ingrese nombre del empleado" required autofocus>
         </div>
 
         <div class="form-group">
-          Apellido:<input type="text" class="form-control" placeholder="Ingresa tu Apellido" name="apellido" required autofocus>
+          Apellido:<input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" title="Ingrese apellido del empleado" required>
         </div>
       <div class="form-group">
-          Correo:<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="correo" required autofocus>
+          Correo:<input type="email" class="form-control" name="correo" id="correo" placeholder="ejemplo@dominio.com" title="ejemplo@gmail.com" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$" required>
         </div>
 
       <div class="form-group">
-          Teléfono:<input type="text" class="form-control" placeholder="Ingresa tu Teléfono" name="telefono" required autofocus>
+          Teléfono:<input type="text" class="form-control" name="telefono" id="telefono" placeholder="2127813002" title="Ingrese un número telefónico" pattern="^[0-9]{7,10}$" required>
+        </div>
+
+        <div class="form-group">
+          Clave:<input type="password" class="form-control" name="clave" id="clave" placeholder="*******" title="Debe tener letras y números" pattern="^[a-zA-Z0-9]{4,10}$" required>
+        </div>
+
+        <div class="form-group">
+          Confirma tu Clave:<input type="password" class="form-control" name="conficlave" id="conficlave" placeholder="*******" title="Debe tener letras y números" pattern="^[a-zA-Z0-9]{4,10}$" required>
         </div>
 
       <div class="form-group" >
-            Seleccione Cargo:<select class="form-control" name="tipo_empe" id="tipo_empe" >
+            Seleccione cargo:<select class="form-control" name="tipoempleado" id="tipoempleado" required>
         <option  selected="selected" value="" >Selecione</option>
         <option value="1">Administrador</option>
         <option value="2">Empleado</option>
@@ -57,13 +65,6 @@ require("../css/css.php");
       </select>
       </div>
 
-        <div class="form-group">
-          Clave:<input type="password" class="form-control" placeholder="Ingresa tu Clave" name="clave" required autofocus>
-        </div>
-
-        <div class="form-group">
-          Confirma tu Clave:<input type="password" class="form-control" placeholder="Confirma tu Clave" name="conficlave" required autofocus>
-        </div>
         <div class="form-group">
           Fecha de Registro:<input type="text" class="form-control"  name="fechacreacion" value="<?php echo date('Y-m-d'); ?>" readonly="true" required autofocus>
         </div>

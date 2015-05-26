@@ -7,7 +7,7 @@ session_start();
 if($destroy)
 {
 	//redirecciono a la página de login
-	header("Location: empleado/login.php");
+	header("Location: ../index.php");
 }
 else
 	{

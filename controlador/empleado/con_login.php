@@ -16,8 +16,11 @@
 		session_start();
 		$row = pg_fetch_array($columna,0,PGSQL_ASSOC);
 		$_SESSION["emp_ced"]=$row["emp_ced"];
-		$_SESSION["emp_cla"]=$row["emp_cla"];
 		$_SESSION["tipemp_cod"]=$row["tipemp_cod"];
+		$_SESSION["emp_cla"]=$row["emp_cla"];
+		$_SESSION["emp_nom"]=$row["emp_nom"];
+		$_SESSION["emp_ape"]=$row["emp_ape"];
+		$_SESSION["emp_cod"]=$row["emp_cod"];
 		header("Location: ../../vista/empleado/inicio.php");
 	}
 	else{

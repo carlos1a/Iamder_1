@@ -1,7 +1,7 @@
 									<ul>
 									<li><a href="javascript:void();">Empleados</a>
 									<ul>
-									<li><a href="vis_registrarempleado.php">Registrar</a></li>
+									<li><a href="../empleado/buscar_empleado.php">Registrar</a></li>
 									<li><a href="vis_consultarempleado.php">Consultar</a></li>									
 									<li><a href="vis_listaempleados.php">Lista de empleados</a></li>
 									<!--<li><a href="#">Manuales</a></li>-->
@@ -9,7 +9,7 @@
 									</li>
 									<li><a href="javascript:void();">Atletas</a>
 									<ul>
-									<li><a href="vis_registraratleta.php">Registrar</a></li>
+									<li><a href="../atleta/buscar_atleta.php">Registrar</a></li>
 									<li><a href="vis_listaatletas.php">Listado de atletas</a></li>
 									<li><a href="g#rafico.php">Estadísticas</a></li>
 
@@ -25,7 +25,7 @@
 								</li>
 									<li><a href="javascript:void();">Noticias</a>
 									<ul>
-									<li><a href="vis_registrarnoticia.php">Registrar</a></li>
+									<li><a href="../noticia/registrar_noticia.php">Registrar</a></li>
 									<li><a href="consulta_conatel.php">Consulta</a></li>
 									<li><a href="reporte_conatel.php">Estadísticas</a></li>
 

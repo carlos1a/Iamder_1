@@ -10,9 +10,9 @@ class Connex{//Abro clase conexión
     function Connex()
     {
         $this->user = 'postgres';
-        $this->clave='Bripfani1a';
+        $this->clave='cucchacao';
         $this->servidor ='localhost';
-        $this->db = 'Iamder';
+        $this->db = 'iamder';
         $this->port = 5432;
         $this->pgconn='';
     }
